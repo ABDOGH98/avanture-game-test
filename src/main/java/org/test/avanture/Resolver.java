@@ -22,18 +22,18 @@ public class Resolver {
     }
 
     private void scanCarte() {
-        List<List<Character>> f_carte = new ArrayList<>(List.of());
-        List<Character> line = new ArrayList<>();
+        List<List<Character>> f_carte = new ArrayList<>();
+        List<Character> carteLine = new ArrayList<>();
         setFileReader();
         int c;
         try {
             while ((c = fileReader.read()) != -1) {
                 if (c == '\n') {
-                    line.add((char) c);
-                    f_carte.add(line);
-                    line = new ArrayList<>();
+                    carteLine.add((char) c);
+                    f_carte.add(carteLine);
+                    carteLine = new ArrayList<>();
                 } else {
-                    line.add((char) c);
+                    carteLine.add((char) c);
                 }
             }
             fileReader.close();
