@@ -47,8 +47,8 @@ public class Resolver {
         currentPosition = position;
     }
 
-    public Position getPosition (Position position, String directions) {
-        setPosition(position);
+    public Position getPosition (Position initPosition, String directions) {
+        setPosition(initPosition);
         scanCarte();
         for (char c : directions.toCharArray()) {
             move(c);
